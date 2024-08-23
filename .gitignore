@@ -61,7 +61,7 @@ web_modules/
 .rpt2_cache/
 .rts2_cache_cjs/
 .rts2_cache_es/
-.rts2_cache_umd/
+.rts2_cache_umd/ 
 
 # Optional REPL history
 .node_repl_history
@@ -121,6 +121,7 @@ dist
 
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
+.vscode
 
 # yarn v2
 .yarn/cache
@@ -128,3 +129,11 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# generated types
+.astro/
+
+.DS_Store
+
+# jetbrains setting folder
+.idea/
