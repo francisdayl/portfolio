@@ -132,6 +132,8 @@ dist
 
 # generated types
 .astro/
+.swp
+.swo
 
 .DS_Store
 

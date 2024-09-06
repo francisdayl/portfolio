@@ -1,0 +1,28 @@
+---
+interface Props {
+	title: string;
+	description: string;
+	href: string;
+    img: string;
+}
+
+const { img, href, title, description } = Astro.props;
+---
+
+<li class="project-card flex flex-col aspect-video">
+	<img src={img} class="object-fit aspect-video" alt={title} width="400">
+    <h3>{title}</h3>
+    <slot/>
+    <p>{description}</p>
+</li>
+<style>
+    .project-card:hover{
+        cursor: pointer;
+
+    }
+    @keyframes bounce {
+        0%   { transform: translateY(0); }
+        50%  { transform: translateY(-50px); }
+        100% { transform: translateY(0); }
+    }
+</style>
