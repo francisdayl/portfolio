@@ -1,0 +1,30 @@
+---
+import ProjectCard from "../ProjectCard.astro";
+---
+
+<div>
+    <h1>Projects</h1>
+    <ul class="grid md:grid-cols-2 xs:grid-cols-1 gap-4 w-3/4 mx-auto">
+        <ProjectCard img="assets/captures/capture_pdf.webp" title='My PDF Toolkit' href='href' description='Application for PDF manipulation'>
+            <ul class="flex flex-row justify-start gap-2">
+                <a href="https://github.com/francisdayl/my_pdf_toolkit" target="_blank">
+                    <img src="assets/icons/github.svg" alt="github" width="25" height="25">
+                </a>
+                <img src="assets/icons/python.svg" alt="python" width="25" height="25">
+                </a>
+            </ul>
+        </ProjectCard>
+        <ProjectCard img="assets/captures/capture_genhora.webp" title='GenHora' href='href' description='Schedule generator for college'>
+            <a href="">xd1</a>
+            <a href="">xd2</a>
+        </ProjectCard>
+        <ProjectCard img="assets/captures/capture_pdf.webp" title='Project1' href='href' description='XD'>
+            <a href="">xd1</a>
+            <a href="">xd2</a>
+        </ProjectCard>
+        <ProjectCard img="assets/captures/capture_pdf.webp" title='Project2' href='href' description='XD'>
+            <a href="">xd1</a>
+            <a href="">xd2</a>
+        </ProjectCard>
+    </ul>
+</div>

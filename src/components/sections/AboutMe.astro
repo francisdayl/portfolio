@@ -1,0 +1,43 @@
+---
+import SocialIcon from "../SocialIcon.astro"
+
+const hobbies = [{icon:'', description:''}]
+
+---
+<div class="flex flex-col md:flex-row justify-between" >
+  <div class="order-0 self-center w-100 md:w-1/2">
+    <h2 class="text-bold text-3xl">Hola Soy David</h2>
+    <p class="text-pretty">
+      Soy David un programador entusiasta y apasionado por la creación de soluciones
+      innovadoras. Con habilidades en desarrollo de software y un amor por la
+      resolución de problemas complejos.
+    </p>
+    <div
+      id="hobbies"
+      class="relative flex flex-col gap-5 overflow-hidden w-full mt-6 md:mt-14">
+      <h2 class="text-xl md:text-2xl font-semibold">Mis hobbies</h2>
+      <ul class="relative flex flex-row w-50 justify-start gap-5">
+        
+      </ul>
+    </div>
+  </div>
+  <div class="order-1 w-25 flex flex-col justify-center overflow-hidden px-4" >
+    <div
+      class="relative flex flex-col gap-2 md:gap-0 md:flex-row "
+    >
+      <img
+        src="assets/images/yo.webp"
+        alt="David Yanez"
+        width="300px"
+        height="300px"
+        class="rounded-full self-center size-80"
+      
+      />
+      <div class="flex flew-row md:flex-col justify-center gap-5">
+        <SocialIcon class="size-5" src="assets/icons/linkedin.svg" location="top-[-14px] md:left-[-6px] md:top-0" href="https://www.linkedin.com/in/david-yanez-lop/"/>
+        <SocialIcon class="size-5" src="assets/icons/gmail.svg" location="top-[-8px] md:top-0" href="mailto:francisdaylol@gmail.com"/>
+        <SocialIcon class="size-5" src="assets/icons/github.svg" location="top-[-14px] md:left-[-6px] md:top-0" href="https://github.com/francisdayl" requiresFill=true/>
+      </div>
+    </div>
+  </div>
+</div>

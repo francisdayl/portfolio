@@ -17,6 +17,7 @@ export const theme = {
 		  },
 	},
 };
+export const darkmode = 'class';
 export const plugins = [
 	require('flowbite/plugin')
 ];

@@ -1,0 +1,11 @@
+---
+
+const { href, description, src, location, requiresFill=false } = Astro.props;
+
+---
+<a class=`size-8  hover:animate-scale hover:cursor-pointer relative ${location} ${requiresFill? 'rounded-full bg-white border-none box-content' : ''}`
+    href={href}
+    target="_blank"
+    rel="noreferer noopener">
+    <img src={src} class=`h-full w-full` alt={description}  />
+</a>
