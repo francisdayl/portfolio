@@ -14,7 +14,10 @@ export const theme = {
 		  },
 		  animation: {
 			scale: 'scale 0.3s ease forwards',
-		  },
+		},
+		grayscale: {
+			70: '70%',
+		  }
 	},
 };
 export const darkmode = 'class';

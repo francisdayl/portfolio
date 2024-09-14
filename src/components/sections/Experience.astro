@@ -47,7 +47,7 @@ const experiences: ExperienceDetail[] = [
 
 
 <h2 class="text-3xl font-semibold">Experiencia Laboral</h2>
-<ol class="relative border-s border-gray-200 dark:border-gray-700 my-10">
+<ol class="relative border-s border-gray-200 dark:border-gray-700 my-10 ml-2">
     {
         experiences.map((experience)=> 
             <ExperienceItem date={experience.date} role={experience.role} 
@@ -56,7 +56,5 @@ const experiences: ExperienceDetail[] = [
             />
         )
     }
-    
-    
 </ol>
 
