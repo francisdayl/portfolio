@@ -1,7 +1,10 @@
 ---
+import Coding from "../icons/Coding.astro"
+import Exercise from "../icons/Exercise.astro"
+import Language from "../icons/Language.astro"
+import Music from "../icons/Music.astro"
+import Puzzle from "../icons/Puzzle.astro"
 import SocialIcon from "../SocialIcon.astro"
-
-const hobbies = [{icon:'', description:''}]
 
 ---
 <div class="flex flex-col md:flex-row justify-between" >
@@ -13,11 +16,14 @@ const hobbies = [{icon:'', description:''}]
       resolución de problemas complejos.
     </p>
     <div
-      id="hobbies"
-      class="relative flex flex-col gap-5 overflow-hidden w-full mt-6 md:mt-14">
+      class="relative flex flex-col gap-5 overflow-hidden w-full mt-6 md:mt-14 mb-5 md:mb-0">
       <h2 class="text-xl md:text-2xl font-semibold">Mis hobbies</h2>
-      <ul class="relative flex flex-row w-50 justify-start gap-5">
-        
+      <ul class="relative flex flex-row w-50 justify-between ">
+        <li class="size-10"><Language/></li>
+        <li class="size-10"><Music/></li>
+        <li class="size-10"><Exercise/></li>
+        <li class="size-10"><Puzzle/></li>
+        <li class="size-10"><Coding/></li>
       </ul>
     </div>
   </div>
