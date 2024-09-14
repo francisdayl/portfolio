@@ -45,18 +45,18 @@ const experiences: ExperienceDetail[] = [
 
 ---
 
-<div class="">
-    <h2 class="text-3xl font-semibold">Experiencia Laboral</h2>
-    <ol class="relative border-s border-gray-200 dark:border-gray-700 my-10">
-        {
-            experiences.map((experience)=> 
-                <ExperienceItem date={experience.date} role={experience.role} 
-                company={experience.company} isCurrent={experience.isCurrent}
-                activities={experience.activities}
-                />
-            )
-        }
-        
-        
-    </ol>
-</div>
+
+<h2 class="text-3xl font-semibold">Experiencia Laboral</h2>
+<ol class="relative border-s border-gray-200 dark:border-gray-700 my-10">
+    {
+        experiences.map((experience)=> 
+            <ExperienceItem date={experience.date} role={experience.role} 
+            company={experience.company} isCurrent={experience.isCurrent}
+            activities={experience.activities}
+            />
+        )
+    }
+    
+    
+</ol>
+
