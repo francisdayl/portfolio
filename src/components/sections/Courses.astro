@@ -1,17 +1,29 @@
-<h2 class="text-3xl font-semibold mt-8">Cursos y Certificados</h2>
+---
+import Certification from '../Certification.astro'
 
+interface CertificationProps{
+    href: string;
+    image: string;
+    name: string;
+    completed: boolean;
+    classnames: string;
+}
+
+const certifications: CertificationProps[] = [{href:"https://www.credly.com/badges/222987f0-e207-4534-a021-c4370165bac9",
+                        image:"assets/icons/cloud_practitioner_badge.webp",name:"AWS Cloud Practitioner",
+                        completed:true,classnames:"size-44"
+                        },
+                        {href:"#courses",
+                        image:"assets/icons/developer_badge.webp",name:"AWS Developer Associate",
+                        completed:false,classnames:"grayscale brightness-150 size-44"
+                        },
+                        ]
+---
+
+<h2 class="text-3xl font-semibold mt-8">Cursos y Certificaciones</h2>
 <ul class="mt-10 flex flex-row justify-center">
-    <li class="flex flex-col">
-        <a href="https://www.credly.com/badges/222987f0-e207-4534-a021-c4370165bac9" target="_blank" rel="noopener noreferrer">
-            <img src="assets/icons/cloud_practitioner_badge.webp" width="180px" height="180px" alt="AWS Cloud Practitioner">
-        </a>
-        <span class="text-center">Certificado</span>
-    </li>
-    <li class="flex flex-col">
-        <a href="#courses" target="" rel="noopener noreferrer">
-            <img class="grayscale brightness-150" src="assets/icons/developer_badge.webp" width="180px" height="180px" alt="AWS Developer Associate">
-        </a>
-        <span class="text-center">En Curso</span>
-    </li>
-
+    {certifications.map(certification=>(
+        <Certification name={certification.name} href={certification.href} image={certification.image}
+    completed={certification.completed} classnames={certification.classnames}/>
+    ))}
 </ul>

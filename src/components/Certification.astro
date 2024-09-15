@@ -1,0 +1,10 @@
+---
+const {href,image,completed=false,classnames, name} = Astro.props;
+---
+
+<li class="flex flex-col">
+    <a href={href} target={completed ? "_blank": "_self"} rel="noopener noreferrer">
+        <img src={image} class={classnames} alt={name}>
+    </a>
+    <span class="text-center font-semibold">{completed? 'Certificado':'Completado'}</span>
+</li>

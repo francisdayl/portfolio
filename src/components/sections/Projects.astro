@@ -1,5 +1,6 @@
 ---
 import Aws from "../icons/Aws.astro";
+import Angular from "../icons/Angular.astro";
 import Bootstrap from "../icons/Bootstrap.astro";
 import Docker from "../icons/Docker.astro";
 import Flask from "../icons/Flask.astro";
@@ -7,6 +8,11 @@ import Git from "../icons/Git.astro";
 import Python from "../icons/Python.astro";
 import Selenium from "../icons/Selenium.astro";
 import ProjectCard from "../ProjectCard.astro";
+import Django from "../icons/Django.astro";
+import MySql from "../icons/MySql.astro";
+import Typescript from "../icons/Typescript.astro";
+import AstroIcon from "../icons/AstroIcon.astro";
+import Tailwind from "../icons/Tailwind.astro";
 
 
 interface Project{
@@ -31,11 +37,17 @@ const projects:Project[] = [
         repository:"https://github.com/francisdayl/GenHora",
         technologies:[Python,Selenium,Git]
     },
-    {image:"assets/captures/capture_genhora.webp", title:"GenHora", 
-        description:"Program that allows to generate all possible schedules based on student/user preferences. The schedules are saved on excel files", 
+    {image:"assets/captures/capture_techstore.png", title:"TechStore", 
+        description:"Technical test consisting on a Full Stack application with CRUD operations.", 
         website:"", 
-        repository:"https://github.com/francisdayl/GenHora",
-        technologies:[Python,Selenium,Git]
+        repository:"https://github.com/francisdayl/prueba_tecnica_royaltic",
+        technologies:[Angular,Django,MySql,Python,Typescript,Docker,Git]
+    },
+    {image:"assets/captures/catpure_portfolio.webp", title:"Portfolio", 
+        description:"Web Portfolio showcasing profile and skillset", 
+        website:"", 
+        repository:"https://github.com/francisdayl/portfolio",
+        technologies:[AstroIcon,Tailwind,Aws,Git]
     },
 ]
 
@@ -43,11 +55,11 @@ const projects:Project[] = [
 
 <h2 class="text-3xl font-semibold mt-10">Proyectos</h2>
 
-<ul class="grid grid-cols-1 justify-center md:grid-cols-2 gap-14 w-full mx-auto my-10">
+<ul class="relative grid grid-cols-1 justify-center md:grid-cols-2 gap-14 w-full mx-auto my-10 px-10 sm:px-0">
     {projects.map(project=>(
         <ProjectCard img={project.image} title={project.title} description={project.description}
         repository={project.repository} website={project.website}>
-            <ul class="flex flex-row justify-start gap-3 mt-2">
+            <ul class="flex flex-row justify-start gap-3 mt-3">
                 {
                     project.technologies.map(TechnologyComponent =>
                         (<TechnologyComponent class="size-8"/>)
