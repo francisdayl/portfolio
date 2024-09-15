@@ -1,10 +1,86 @@
 ---
+import Javascript from "../icons/Javascript.astro";
+import Typescript from "../icons/Typescript.astro";
+import Python from "../icons/Python.astro";
+import Angular from "../icons/Angular.astro";
 import IconSkill from "../IconSkill.astro";
+import NodeJs from "../icons/NodeJs.astro";
+import Java from "../icons/Java.astro";
+import React from "../icons/React.astro";
+import Tailwind from "../icons/Tailwind.astro";
+import Django from "../icons/Django.astro";
+import AstroIcon from "../icons/AstroIcon.astro";
+import Bootstrap from "../icons/Bootstrap.astro";
+import FastApi from "../icons/FastApi.astro";
+import Flask from "../icons/Flask.astro";
+import ExpressIcon from "../icons/ExpressIcon.astro";
+import MySql from "../icons/MySql.astro";
+import PostgreSQL from "../icons/PostgreSQL.astro";
+import SQLite from "../icons/SQLite.astro";
+import Aws from "../icons/Aws.astro";
+import Docker from "../icons/Docker.astro";
+
+interface Skill{
+    title: string;
+    description: string;
+    component: any;
+}
+
+interface SkillSet{
+    name: string;
+    skill: Skill[]
+}
+
+const skillSet: SkillSet[] = [
+    {name:"Lenguajes", 
+        skill:[
+            {title:"Python", description:"3+ years, 20+ projects", component:Python},
+            {title:"Javascript", description:"2+ years, 10+ projects", component:Javascript},
+            {title:"Typescript", description:"2+ years, 8+ projects", component:Typescript},
+            {title:"NodeJs", description:"2+ years, 8+ projects", component:NodeJs},
+            {title:"Java", description:"2 years, 4+ projects", component:Java},
+        ],   
+    },
+    {name:"Frontend", 
+        skill:[
+            {title:"Angular", description:"2+ years, 3+ projects", component:Angular},
+            {title:"React", description:"2+ years, 2 projects", component:React},
+            {title:"Django", description:"2+ years, 3 projects", component:Django},
+            {title:"Astro", description:"6 months, 1 project", component:AstroIcon},
+            {title:"Bootstrap", description:"2+ year, 7+ projects", component:Bootstrap},
+            {title:"Tailwind", description:"2+ years, 10+ projects", component:Tailwind},
+        ],   
+    },
+    {name:"Backend",
+        skill:[
+            {title:"FastApi", description:"1+ years, 2+ projects", component:FastApi},
+            {title:"Flask", description:"1+ years, 2+ projects", component:Flask},
+            {title:"Express", description:"1+ years, 2+ projects", component:ExpressIcon},
+        ]
+    },
+    {name:"Database",
+        skill:[
+            {title:"MySQL", description:"1+ years, 2+ projects", component:MySql},
+            {title:"PostgreSQL", description:"1+ years, 2+ projects", component:PostgreSQL},
+            {title:"SQLite", description:"1+ years, 2+ projects", component:SQLite},
+
+        ]
+    },
+    {name:"DevOps",
+        skill:[
+            {title:"AWS", description:"1+ years, 2+ projects", component:Aws},
+            {title:"Docker", description:"1+ years, 2+ projects", component:Docker},
+        ]
+    },
+    {name:"Otros",
+        skill:[]
+    },
+    ]
 ---
 
 <h2 class="text-3xl font-semibold">Habilidades</h2>
 
-<table class="w-full mx-auto text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 mt-10">
+<table class="w-full  mx-auto text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 mt-10">
     <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
         <tr>
             <th scope="col" class="px-6 py-3">
@@ -16,53 +92,24 @@ import IconSkill from "../IconSkill.astro";
         </tr>
     </thead>
     <tbody>
-        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                Languages
-            </th>
-            <td class="px-6 py-4 flex gap-6 justify-start">
-                <IconSkill src='assets/icons/python.svg' title='Python' description='Python' width='40px' height='40px' />
-                <IconSkill src='assets/icons/javascript.svg' title='Javascript' description='Javascript' width='40px' height='40px' />
-                <IconSkill src='assets/icons/typescript.svg' title='Typescript' description='Typescript' width='40px' height='40px' />
-                <IconSkill src='assets/icons/dart.svg' title='Dart' description='Dart' width='40px' height='40px' />
-                <IconSkill src='assets/icons/java.svg' title='Java' description='Java' width='40px' height='40px' />
-    
-            </td>
-        </tr>
-        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                Front-End
-            </th>
-            <td class="px-6 py-4 flex gap-6 justify-start">
-                <IconSkill src='assets/icons/angular.svg' title='Angular' description='Angular' width='40px' height='40px' />
-                <IconSkill src='assets/icons/react.svg' title='React' description='React' width='40px' height='40px' />
-                
-            </td>
-        </tr>
-        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                Back-End
-            </th>
-            <td class="px-6 py-4">
-                XDDDD
-            </td>
-        </tr>
-        <tr class="bg-white border-b dark:bg-gray-800">
-            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                Database
-            </th>
-            <td class="px-6 py-4">
-                XDD
-            </td>
-        </tr>
-        <tr class="bg-white dark:bg-gray-800">
-            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                Deployment
-            </th>
-            <td class="px-6 py-4">
-                XDDD
-            </td>
-        </tr>
+        {
+            skillSet.map(setSkill => (
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white w-1/4">
+                    {setSkill.name}
+                </th>
+                <td class="px-6 py-4 flex justify-start gap-10">
+                    {
+                        setSkill.skill.map((skill)=>(
+                        <IconSkill  title={skill.title} description={skill.description}>
+                            <skill.component class='size-10' data-tooltip-target={"tooltip-light-"+skill.title} data-tooltip-style="light"/>
+                        </IconSkill>
+                        ))
+                    }
+                </td>
+            </tr>
+            ))
+        }
         
     </tbody>
 </table>

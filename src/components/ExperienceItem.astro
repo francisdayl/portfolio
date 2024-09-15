@@ -24,7 +24,7 @@ const { company, role, date, activities , isCurrent=false} = Astro.props;
                 activities.map((activity)=>(
                     <li class="text-pretty list-disc ml-1">
                         {activity.description}  {activity.technologies && (<strong> 
-                            ({activity.technologies.join("-")})
+                            ({activity.technologies.join(", ")})
                         </strong>)} 
                     </li>
                 ))
