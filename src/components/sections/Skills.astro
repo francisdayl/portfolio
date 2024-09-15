@@ -1,24 +1,31 @@
 ---
-import Javascript from "../icons/Javascript.astro";
-import Typescript from "../icons/Typescript.astro";
-import Python from "../icons/Python.astro";
 import Angular from "../icons/Angular.astro";
-import IconSkill from "../IconSkill.astro";
-import NodeJs from "../icons/NodeJs.astro";
-import Java from "../icons/Java.astro";
-import React from "../icons/React.astro";
-import Tailwind from "../icons/Tailwind.astro";
-import Django from "../icons/Django.astro";
 import AstroIcon from "../icons/AstroIcon.astro";
-import Bootstrap from "../icons/Bootstrap.astro";
-import FastApi from "../icons/FastApi.astro";
-import Flask from "../icons/Flask.astro";
-import ExpressIcon from "../icons/ExpressIcon.astro";
-import MySql from "../icons/MySql.astro";
-import PostgreSQL from "../icons/PostgreSQL.astro";
-import SQLite from "../icons/SQLite.astro";
 import Aws from "../icons/Aws.astro";
+import Bootstrap from "../icons/Bootstrap.astro";
+import Django from "../icons/Django.astro";
 import Docker from "../icons/Docker.astro";
+import ExpressIcon from "../icons/ExpressIcon.astro";
+import FastApi from "../icons/FastApi.astro";
+import Figma from "../icons/Figma.astro";
+import Flask from "../icons/Flask.astro";
+import Flutter from "../icons/Flutter.astro";
+import Git from "../icons/Git.astro";
+import IconSkill from "../IconSkill.astro";
+import Java from "../icons/Java.astro";
+import Javascript from "../icons/Javascript.astro";
+import Mongo from "../icons/Mongo.astro";
+import MySql from "../icons/MySql.astro";
+import NodeJs from "../icons/NodeJs.astro";
+import PostgreSQL from "../icons/PostgreSQL.astro";
+import Postman from "../icons/Postman.astro";
+import Python from "../icons/Python.astro";
+import React from "../icons/React.astro";
+import Rive from "../icons/Rive.astro";
+import Selenium from "../icons/Selenium.astro";
+import SQLite from "../icons/SQLite.astro";
+import Tailwind from "../icons/Tailwind.astro";
+import Typescript from "../icons/Typescript.astro";
 
 interface Skill{
     title: string;
@@ -63,17 +70,24 @@ const skillSet: SkillSet[] = [
             {title:"MySQL", description:"1+ years, 2+ projects", component:MySql},
             {title:"PostgreSQL", description:"1+ years, 2+ projects", component:PostgreSQL},
             {title:"SQLite", description:"1+ years, 2+ projects", component:SQLite},
-
+            {title:"MongoDB", description:"1+ years, 2+ projects", component:Mongo},
         ]
     },
     {name:"DevOps",
         skill:[
             {title:"AWS", description:"1+ years, 2+ projects", component:Aws},
             {title:"Docker", description:"1+ years, 2+ projects", component:Docker},
+            {title:"Git", description:"1+ years, 2+ projects", component:Git},
         ]
     },
     {name:"Otros",
-        skill:[]
+        skill:[
+            {title:"Flutter", description:"1+ years, 2+ projects", component:Flutter},
+            {title:"Selenium", description:"1+ years, 2+ projects", component:Selenium},
+            {title:"Figma", description:"1+ years, 2+ projects", component:Figma},
+            {title:"Postman", description:"1+ years, 2+ projects", component:Postman},
+            {title:"Rive", description:"1+ years, 2+ projects", component:Rive},
+        ]
     },
     ]
 ---
