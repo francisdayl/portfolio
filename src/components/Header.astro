@@ -1,7 +1,12 @@
 ---
+import { late } from "astro:schema"
 import ThemeToggle from "./ThemeToggle.astro"
 
 const navItems = [
+    {title:"CV",
+      label:"CV",
+      url:"David_Yanez_Lopez_cv_es.pdf"
+    },
     {
         title: "Sobre mí",
         label: "sobre-mi",
@@ -43,6 +48,7 @@ const navItems = [
           class="relative block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500"
           aria-label={link.label}
           href={link.url}
+          target={link.label == "CV" ? "_blank": "_self"}
         >
           {link.title}
         </a>

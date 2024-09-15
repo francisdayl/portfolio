@@ -1,30 +1,60 @@
 ---
+import Aws from "../icons/Aws.astro";
+import Bootstrap from "../icons/Bootstrap.astro";
+import Docker from "../icons/Docker.astro";
+import Flask from "../icons/Flask.astro";
+import Git from "../icons/Git.astro";
+import Python from "../icons/Python.astro";
+import Selenium from "../icons/Selenium.astro";
 import ProjectCard from "../ProjectCard.astro";
+
+
+interface Project{
+    image: string;
+    title: string;
+    description: string;
+    website: string;
+    repository: string;
+    technologies: any[];
+}
+
+const projects:Project[] = [
+    {image:"assets/captures/capture_pdf.webp", title:"My PDF Toolkit", 
+        description:"Application for PDF manipulation", 
+        website:"https://mmgkxuq3hr.us-east-1.awsapprunner.com/", 
+        repository:"https://github.com/francisdayl/my_pdf_toolkit",
+        technologies:[Python,Flask,Aws,Docker,Bootstrap,Git]
+    },
+    {image:"assets/captures/capture_genhora.webp", title:"GenHora", 
+        description:"Program that allows to generate all possible schedules based on student/user preferences. The schedules are saved on excel files", 
+        website:"", 
+        repository:"https://github.com/francisdayl/GenHora",
+        technologies:[Python,Selenium,Git]
+    },
+    {image:"assets/captures/capture_genhora.webp", title:"GenHora", 
+        description:"Program that allows to generate all possible schedules based on student/user preferences. The schedules are saved on excel files", 
+        website:"", 
+        repository:"https://github.com/francisdayl/GenHora",
+        technologies:[Python,Selenium,Git]
+    },
+]
+
 ---
 
-<div>
-    <h1>Projects</h1>
-    <ul class="grid md:grid-cols-2 xs:grid-cols-1 gap-4 w-3/4 mx-auto">
-        <ProjectCard img="assets/captures/capture_pdf.webp" title='My PDF Toolkit' href='href' description='Application for PDF manipulation'>
-            <ul class="flex flex-row justify-start gap-2">
-                <a href="https://github.com/francisdayl/my_pdf_toolkit" target="_blank">
-                    <img src="assets/icons/github.svg" alt="github" width="25" height="25">
-                </a>
-                <img src="assets/icons/python.svg" alt="python" width="25" height="25">
-                </a>
+<h2 class="text-3xl font-semibold mt-10">Proyectos</h2>
+
+<ul class="grid grid-cols-1 justify-center md:grid-cols-2 gap-14 w-full mx-auto my-10">
+    {projects.map(project=>(
+        <ProjectCard img={project.image} title={project.title} description={project.description}
+        repository={project.repository} website={project.website}>
+            <ul class="flex flex-row justify-start gap-3 mt-2">
+                {
+                    project.technologies.map(TechnologyComponent =>
+                        (<TechnologyComponent class="size-8"/>)
+                    )
+                }
             </ul>
         </ProjectCard>
-        <ProjectCard img="assets/captures/capture_genhora.webp" title='GenHora' href='href' description='Schedule generator for college'>
-            <a href="">xd1</a>
-            <a href="">xd2</a>
-        </ProjectCard>
-        <ProjectCard img="assets/captures/capture_pdf.webp" title='Project1' href='href' description='XD'>
-            <a href="">xd1</a>
-            <a href="">xd2</a>
-        </ProjectCard>
-        <ProjectCard img="assets/captures/capture_pdf.webp" title='Project2' href='href' description='XD'>
-            <a href="">xd1</a>
-            <a href="">xd2</a>
-        </ProjectCard>
-    </ul>
-</div>
+    ))}
+    
+</ul>

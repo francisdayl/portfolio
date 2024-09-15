@@ -1,28 +1,29 @@
 ---
+import Repository from './icons/Repository.astro';
+import Web from './icons/Web.astro';
+
 interface Props {
 	title: string;
 	description: string;
-	href: string;
+	repository?: string;
+	website?: string;
     img: string;
 }
 
-const { img, href, title, description } = Astro.props;
+const { img, repository,website, title, description } = Astro.props;
 ---
 
-<li class="project-card flex flex-col aspect-video">
-	<img src={img} class="object-fit aspect-video" alt={title} width="400">
-    <h3>{title}</h3>
+<li class="p-4 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ">
+	<img src={img} class="object-fit aspect-video rounded-lg w-full" alt={title}>
+    <div class="my-2 flex flex-row w-full">
+        <span class="font-semibold">{title} - </span>
+        {website && (
+            <Web class="ml-2 size-6 hover:animate-scale" size="6" href={website}/>)
+        }
+        {repository && (
+            <Repository class="ml-2 size-6 hover:animate-scale" size="6" href={repository}/>)
+        }
+    </div>
+    <p class="">{description}</p>
     <slot/>
-    <p>{description}</p>
 </li>
-<style>
-    .project-card:hover{
-        cursor: pointer;
-
-    }
-    @keyframes bounce {
-        0%   { transform: translateY(0); }
-        50%  { transform: translateY(-50px); }
-        100% { transform: translateY(0); }
-    }
-</style>

@@ -1,11 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import SectionContainer from '../components/SectionContainer.astro';
+
 import AboutMe from '../components/sections/AboutMe.astro';
-import Experience from '../components/sections/Experience.astro';
-import SkillsSection from '../components/sections/Skills.astro';
 import Courses from '../components/sections/Courses.astro';
-import Project from '../components/Project.astro';
+import Experience from '../components/sections/Experience.astro';
+import Projects from '../components/sections/Projects.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import SkillsSection from '../components/sections/Skills.astro';
 ---
 
 <Layout title="David Yánez L.">
@@ -24,7 +25,7 @@ import Project from '../components/Project.astro';
                 <Courses/>
             </SectionContainer>
             <SectionContainer id="projects" data-id="projects">
-                <Project/>
+                <Projects/>
             </SectionContainer>
         </div>
     </main>
