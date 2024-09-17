@@ -1,4 +1,5 @@
 ---
+import LanguageToggle from "./LanguageToggle.astro";
 import ThemeToggle from "./ThemeToggle.astro"
 
 const textContext = Astro.props.textContext;
@@ -55,7 +56,8 @@ const navItems = [
         </a>
       ))
     }
-    <ThemeToggle />
+    <ThemeToggle themeNames={[textContext.ThemeLight,textContext.ThemeDark,textContext.ThemeSystem]} />
+    <LanguageToggle/>
   </nav>
 </header>
 
