@@ -1,6 +1,6 @@
 export const translatedSpanishContent = {
     'NavBar':{
-        'CVFile':'',
+        'CVFile':'David_Yanez_Lopez_cv_es.pdf',
         'AboutMe':'About Me',
         'AboutURL':'',
         'Experience':'Experience',
