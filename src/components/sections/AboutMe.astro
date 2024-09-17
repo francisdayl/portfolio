@@ -11,7 +11,7 @@ const textContext = Astro.props.textContext;
 ---
 <div class="flex flex-col md:flex-row justify-between" >
   <div class="order-0 self-center w-100 md:w-1/2">
-    <h2 class="text-bold text-3xl">{textContext.Greeting}</h2>
+    <h2 id="typewriter" class="text-bold text-3xl">{textContext.Greeting}</h2>
     <p class="text-pretty">
       {textContext.Description}
     </p>
@@ -47,3 +47,35 @@ const textContext = Astro.props.textContext;
     </div>
   </div>
 </div>
+
+<style>
+  #typewriter::after {
+    content: '|';
+    animation: blink 0.7s infinite;
+  }
+
+  @keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const typewriterElement = document.getElementById('typewriter');
+    const text = typewriterElement.innerText;
+    typewriterElement.innerText = "";
+    let index = 0;
+
+    function typeWriter() {
+      if (index < text.length) {
+        typewriterElement.innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, 125);
+      }
+    }
+
+    typeWriter();
+  });
+</script>
