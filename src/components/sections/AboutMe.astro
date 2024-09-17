@@ -5,6 +5,7 @@ import Language from "../icons/Language.astro"
 import Music from "../icons/Music.astro"
 import Puzzle from "../icons/Puzzle.astro"
 import SocialIcon from "../SocialIcon.astro"
+import Me from '@public/assets/images/yo.webp'
 
 const textContext = Astro.props.textContext;
 
@@ -32,7 +33,7 @@ const textContext = Astro.props.textContext;
       class="relative flex flex-col gap-2 md:gap-0 md:flex-row "
     >
       <img
-        src="assets/images/yo.webp"
+        src={Me.src}
         alt="David Yanez"
         width="300px"
         height="300px"

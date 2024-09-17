@@ -2,6 +2,8 @@
 import EnIcon from "./icons/En.astro"
 import EsIcon from "./icons/Es.astro"
 
+import { languages } from '../i18n/ui';
+
 const isEnglish =  Astro.url.toString().includes("/en");
 const baseClass= "size-6 rounded-full";
 const disabledClass = ' cursor-default';
@@ -15,9 +17,9 @@ const esExtraClass = !isEnglish?disabledClass:enabledClass;
     {
 
     }
-    <a id="EnglishRef" href="en" class={isEnglish? 'order-1':'order-2 hidden'}>
+    <a id="EnglishRef" href="/en/" class={isEnglish? 'order-1':'order-2 hidden'}>
         <EnIcon class={baseClass+engExtraClass}/></a>
-    <a id="SpanishRef" href="/" class={!isEnglish? 'order-1':'order-2 hidden'}>
+    <a id="SpanishRef" href="/es/" class={!isEnglish? 'order-1':'order-2 hidden'}>
         <EsIcon class={baseClass+esExtraClass}/>
     </a>
 </div>

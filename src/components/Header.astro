@@ -2,6 +2,10 @@
 import LanguageToggle from "./LanguageToggle.astro";
 import ThemeToggle from "./ThemeToggle.astro"
 
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 const textContext = Astro.props.textContext;
 
 const navItems = [
