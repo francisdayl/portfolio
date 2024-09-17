@@ -6,6 +6,9 @@ import Music from "../icons/Music.astro"
 import Puzzle from "../icons/Puzzle.astro"
 import SocialIcon from "../SocialIcon.astro"
 import Me from '@public/assets/images/yo.webp'
+import LinkedInIcon from '@public/assets/icons/linkedin.svg'
+import GithubIcon from '@public/assets/icons/github.svg'
+import MailMeIcon from '@public/assets/icons/gmail.svg'
 
 const textContext = Astro.props.textContext;
 
@@ -41,9 +44,9 @@ const textContext = Astro.props.textContext;
       
       />
       <div class="flex flew-row md:flex-col justify-center gap-5">
-        <SocialIcon class="size-5" src="assets/icons/linkedin.svg" location="top-[-14px] md:left-[-6px] md:top-0" href="https://www.linkedin.com/in/david-yanez-lop/"/>
-        <SocialIcon class="size-5" src="assets/icons/gmail.svg" location="top-[-8px] md:top-0" href="mailto:francisdaylol@gmail.com"/>
-        <SocialIcon class="size-5" src="assets/icons/github.svg" location="top-[-14px] md:left-[-6px] md:top-0" href="https://github.com/francisdayl" requiresFill=true/>
+        <SocialIcon class="size-5" src={LinkedInIcon.src} location="top-[-14px] md:left-[-6px] md:top-0" href="https://www.linkedin.com/in/david-yanez-lop/"/>
+        <SocialIcon class="size-5" src={MailMeIcon.src} location="top-[-8px] md:top-0" href="mailto:francisdaylol@gmail.com"/>
+        <SocialIcon class="size-5" src={GithubIcon.src} location="top-[-14px] md:left-[-6px] md:top-0" href="https://github.com/francisdayl" requiresFill=true/>
       </div>
     </div>
   </div>

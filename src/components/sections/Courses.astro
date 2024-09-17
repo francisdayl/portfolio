@@ -1,5 +1,7 @@
 ---
 import Certification from '../Certification.astro'
+import CloudPractitionerCertification from '@public/assets/icons/cloud_practitioner_badge.webp'
+import DeveloperAssociateCertification from '@public/assets/icons/developer_badge.webp'
 
 interface CertificationProps{
     href: string;
@@ -10,11 +12,11 @@ interface CertificationProps{
 }
 
 const certifications: CertificationProps[] = [{href:"https://www.credly.com/badges/222987f0-e207-4534-a021-c4370165bac9",
-                        image:"assets/icons/cloud_practitioner_badge.webp",name:"AWS Cloud Practitioner",
+                        image:CloudPractitionerCertification.src,name:"AWS Cloud Practitioner",
                         completed:true,classnames:"size-44"
                         },
                         {href:"#courses",
-                        image:"assets/icons/developer_badge.webp",name:"AWS Developer Associate",
+                        image:DeveloperAssociateCertification.src,name:"AWS Developer Associate",
                         completed:false,classnames:"grayscale brightness-150 size-44"
                         },
                         ]
