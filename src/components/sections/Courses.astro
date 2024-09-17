@@ -18,12 +18,15 @@ const certifications: CertificationProps[] = [{href:"https://www.credly.com/badg
                         completed:false,classnames:"grayscale brightness-150 size-44"
                         },
                         ]
+
+const textContext = Astro.props.textContext;
+
 ---
 
-<h2 class="text-3xl font-semibold mt-8">Cursos y Certificaciones</h2>
+<h2 class="text-3xl font-semibold mt-8">{textContext.Title}</h2>
 <ul class="mt-10 flex flex-row justify-center">
     {certifications.map(certification=>(
         <Certification name={certification.name} href={certification.href} image={certification.image}
-    completed={certification.completed} classnames={certification.classnames}/>
+    completed={certification.completed} classnames={certification.classnames} textContext={textContext}/>
     ))}
 </ul>

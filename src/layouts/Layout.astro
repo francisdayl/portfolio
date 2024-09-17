@@ -1,6 +1,9 @@
 ---
 import { ViewTransitions } from "astro:transitions";
 import Header from "../components/Header.astro";
+import {translatedEnglishContent} from '../../public/locales/en/translations'
+import {translatedSpanishContent} from '../../public/locales/es/translations'
+
 
 interface Props {
 	title: string;
@@ -8,10 +11,12 @@ interface Props {
 
 const { title } = Astro.props;
 const description = "David Yanez Lopez, Desarrollador full stack con más de 3 años de experiencia creando soluciones informáticas de diferente naturaleza" ;
+const currentLanguage =Astro.url.toString().endsWith("/")? 'es': 'en';
+
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={currentLanguage}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
@@ -39,7 +44,7 @@ const description = "David Yanez Lopez, Desarrollador full stack con más de 3 a
       dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]
       "
 		>
-			<Header />
+			<Header textContext={currentLanguage==="es"? translatedSpanishContent.NavBar: translatedEnglishContent.NavBar}/>
 			<slot />
 		</div>
 	</body>

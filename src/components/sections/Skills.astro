@@ -1,31 +1,6 @@
 ---
-import Angular from "../icons/Angular.astro";
-import AstroIcon from "../icons/AstroIcon.astro";
-import Aws from "../icons/Aws.astro";
-import Bootstrap from "../icons/Bootstrap.astro";
-import Django from "../icons/Django.astro";
-import Docker from "../icons/Docker.astro";
-import ExpressIcon from "../icons/ExpressIcon.astro";
-import FastApi from "../icons/FastApi.astro";
-import Figma from "../icons/Figma.astro";
-import Flask from "../icons/Flask.astro";
-import Flutter from "../icons/Flutter.astro";
-import Git from "../icons/Git.astro";
-import IconSkill from "../IconSkill.astro";
-import Java from "../icons/Java.astro";
-import Javascript from "../icons/Javascript.astro";
-import Mongo from "../icons/Mongo.astro";
-import MySql from "../icons/MySql.astro";
-import NodeJs from "../icons/NodeJs.astro";
-import PostgreSQL from "../icons/PostgreSQL.astro";
-import Postman from "../icons/Postman.astro";
-import Python from "../icons/Python.astro";
-import React from "../icons/React.astro";
-import Rive from "../icons/Rive.astro";
-import Selenium from "../icons/Selenium.astro";
-import SQLite from "../icons/SQLite.astro";
-import Tailwind from "../icons/Tailwind.astro";
-import Typescript from "../icons/Typescript.astro";
+import { IconSkill } 
+    from "../icons/index"
 
 interface Skill{
     title: string;
@@ -38,70 +13,21 @@ interface SkillSet{
     skill: Skill[]
 }
 
-const skillSet: SkillSet[] = [
-    {name:"Lenguajes", 
-        skill:[
-            {title:"Python", description:"+3 years, +20 projects", component:Python},
-            {title:"Javascript", description:"+3 years, +10 projects", component:Javascript},
-            {title:"Typescript", description:"+3 years, +6 projects", component:Typescript},
-            {title:"NodeJs", description:"+3 years, +4 projects", component:NodeJs},
-            {title:"Java", description:"2 years, +4 projects", component:Java},
-        ],   
-    },
-    {name:"Frontend", 
-        skill:[
-            {title:"Angular", description:"+2 years, +5 projects", component:Angular},
-            {title:"React", description:"+2 years, +2 projects", component:React},
-            {title:"Django", description:"+2 years, +3 projects", component:Django},
-            {title:"Astro", description:"6 months, 1 project", component:AstroIcon},
-            {title:"Bootstrap", description:"+2 year, +7 projects", component:Bootstrap},
-            {title:"Tailwind", description:"+2 years, +10 projects", component:Tailwind},
-        ],   
-    },
-    {name:"Backend",
-        skill:[
-            {title:"FastApi", description:"+1 years, +2 projects", component:FastApi},
-            {title:"Flask", description:"+2 years, +3 projects", component:Flask},
-            {title:"Express", description:"+2 years, +2 projects", component:ExpressIcon},
-        ]
-    },
-    {name:"Database",
-        skill:[
-            {title:"MySQL", description:"+3 years, +4 projects", component:MySql},
-            {title:"PostgreSQL", description:"+2 years, +5 projects", component:PostgreSQL},
-            {title:"SQLite", description:"+3 years, +4 projects", component:SQLite},
-            {title:"MongoDB", description:"+1 years, +2 projects", component:Mongo},
-        ]
-    },
-    {name:"DevOps",
-        skill:[
-            {title:"AWS", description:"+1 years, +2 projects", component:Aws},
-            {title:"Docker", description:"+1 years, +4 projects", component:Docker},
-            {title:"Git", description:"+3 years, +10 projects", component:Git},
-        ]
-    },
-    {name:"Otros",
-        skill:[
-            {title:"Flutter", description:"+1 years, +2 projects", component:Flutter},
-            {title:"Selenium", description:"+2 years, +10 projects", component:Selenium},
-            {title:"Figma", description:"+3 years, +10 projects", component:Figma},
-            {title:"Postman", description:"+2 years, +10 projects", component:Postman},
-            {title:"Rive", description:"1 year, 1 project", component:Rive},
-        ]
-    },
-    ]
+const textContext = Astro.props.textContext;
+const skillSet: SkillSet[] = Astro.props.skillSet;
 ---
 
-<h2 class="text-3xl font-semibold">Habilidades</h2>
+<h2 class="text-3xl font-semibold">{textContext.Title}</h2>
 
 <table class="w-full  mx-auto text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 mt-10">
     <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
         <tr>
             <th scope="col" class="px-6 py-3">
-                Tipo
+                {textContext.Category}
             </th>
             <th scope="col" class="px-6 py-3 text-center">
-                Herramientas
+                {textContext.Tools}
+
             </th>
         </tr>
     </thead>

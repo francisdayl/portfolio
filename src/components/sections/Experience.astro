@@ -14,44 +14,18 @@ interface ExperienceDetail {
     activities: ExperienceActivity[];
 
 }
-
-const experiences: ExperienceDetail[] = [
-    {date:"Junio 2023", role:"Software Engineer", company:"CandoCorp", isCurrent:true, 
-        activities:[
-            {description:"Actualización y creación de funcionalidades, vistas, pruebas, plantillas, modelos y panel administrativo en plataforma para una start-up americana de registro de propiedad intelectual",
-                technologies:["Django","PostgreSQL","JavaScript","Docker","JQuery"]},
-            {description:"Desarrollo back-end y front-end para plataforma de gestión de almacenes.",
-                technologies:["React","FastAPI","PostgreSQL","AzureDevOps"]},
-            {description:"Capacitación y mentoría de nuevos desarrolladores.",},],
-    },
-    {date:"Julio 2022 - Enero 2023", role:"Full Stack Developer", company:"BlackBox", isCurrent:false, 
-        activities:[
-            {description:"Desarrollo de interfaz y funcionalidades de módulo de facturación para plataforma de courier. ",
-                technologies:["Angular", "Express", "NodeJS", "Typescript"]},
-            {description:"Despliegue en producción.",
-                technologies:["Jenkins","AWS"]},],
-    },
-    {date:"Enero 2022 - Junio 2022", role:"Full Stack Developer (Pasante)", company:"BlackBox", isCurrent:false, 
-        activities:[
-            {description:"Mantenimiento de plataforma de gestión de turnos.",
-                technologies:["Angular","Typescript", "Java", "PostgreSQL"]},
-            {description:"Extraction, Transformation, Load (ETL).",
-                technologies:["Python", "Selenium", "PostgreSQL"]},
-            {description:"Chatbot de Whatsapp y generación de reportes.",
-                technologies:["NodeJS", "Excel"]},
-        ],
-    },
-];
-
+const textContext = Astro.props.textContext;
+const experiences: ExperienceDetail[] = Astro.props.workExperience;
 ---
 
 
-<h2 class="text-3xl font-semibold">Experiencia Laboral</h2>
+<h2 class="text-3xl font-semibold">{textContext.Title}</h2>
 <ol class="relative border-s border-gray-200 dark:border-gray-700 my-10 ml-2">
     {
         experiences.map((experience)=> 
             <ExperienceItem date={experience.date} role={experience.role} 
             company={experience.company} isCurrent={experience.isCurrent}
+            textContext={textContext}
             activities={experience.activities}
             />
         )

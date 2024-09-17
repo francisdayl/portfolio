@@ -1,0 +1,42 @@
+---
+import SectionContainer from "../../components/SectionContainer.astro";
+import AboutMe from "../../components/sections/AboutMe.astro";
+import Courses from "../../components/sections/Courses.astro";
+import Experience from "../../components/sections/Experience.astro";
+import Projects from "../../components/sections/Projects.astro";
+import Layout from "../../layouts/Layout.astro";
+import SkillsSection from '../../components/sections/Skills.astro';
+import {translatedEnglishContent} from '../../../public/locales/en/translations'
+import { experience } from "../../../public/locales/en/experience";
+import { englishSkills } from "../../../public/locales/en/skills";
+import { englishProjects } from "../../../public/locales/en/projects";
+
+const englishContext = translatedEnglishContent;
+const englishExperience = experience;
+const englishSkillSet = englishSkills;
+
+
+---
+
+
+<Layout title="David Yánez L.">
+    <main class="overflow-x-hidden">
+        <SectionContainer id="about-me" data-section="about-me" class="py-16 md:py-36">
+            <AboutMe textContext={englishContext.AboutMe}/>
+        </SectionContainer>
+        <div class="space-y-24"></div>
+            <SectionContainer id="experience" data-section="experience">
+                <Experience textContext={englishContext.Experience} workExperience={englishExperience}/>
+            </SectionContainer>
+            <SectionContainer id="skills" data-section="skills">
+                <SkillsSection textContext={englishContext.Skills} skillSet={englishSkillSet}/>
+            </SectionContainer>
+            <SectionContainer id="courses" data-id="courses">
+                <Courses textContext={englishContext.Courses}/>
+            </SectionContainer>
+            <SectionContainer id="projects" data-id="projects">
+                <Projects textContext={englishContext.Projects} projects={englishProjects}/>
+            </SectionContainer>
+        </div>
+    </main>
+</Layout>
