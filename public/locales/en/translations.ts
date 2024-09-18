@@ -1,6 +1,6 @@
 export const translatedEnglishContent = {
     'NavBar':{
-        'CVFile':'David_Yanez_Lopez_cv_en.pdf',
+        'CVFile': 'https://francisdayl-files.s3.amazonaws.com/David_Yanez_Lopez_cv_en.pdf',
         'AboutMe':'About Me',
         'Experience':'Experience',
         'Skills':'Skills',
