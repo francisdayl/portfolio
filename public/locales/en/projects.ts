@@ -7,6 +7,7 @@ import GenHoraCapture from "@public/assets/captures/capture_genhora.webp";
 import MyPdfToolkitCapture from "@public/assets/captures/capture_pdf.webp";
 import MyPortfolioCapture from "@public/assets/captures/catpure_portfolio.webp";
 import TechstoreCapture from "@public/assets/captures/capture_techstore.png";
+import RealAltoCapture from "@public/assets/captures/capture_real_alto_app.webp";
 
 export const englishProjects = [
     {image:MyPdfToolkitCapture.src, title:"My PDF Toolkit", 
@@ -26,6 +27,13 @@ export const englishProjects = [
         website:"", 
         repository:"https://github.com/francisdayl/prueba_tecnica_royaltic",
         technologies:[Angular,Django,MySql,Python,Typescript,Docker,Git]
+    },
+    {image:RealAltoCapture.src, title:"Real Alto App", 
+        description:"Augmented reality mobile app for the Real Alto museum", 
+        website:"",
+        repository:"",
+        video: "https://youtu.be/2grFiHItiJ0",
+        technologies:[Flutter,Git]
     },
     {image:MyPortfolioCapture.src, title:"Portfolio", 
         description:"Web Portfolio showcasing profile and skillset", 

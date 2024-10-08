@@ -36,7 +36,7 @@ export const spanishProjects = [
         description:"Aplicación con realidad aumentada para el museo Real Alto", 
         website:"",
         repository:"",
-        video_link: "https://youtu.be/2grFiHItiJ0",
+        video: "https://youtu.be/2grFiHItiJ0",
         technologies:[Flutter,Git]
     },
     {image:MyPortfolioCapture.src, title:"Portfolio", 
