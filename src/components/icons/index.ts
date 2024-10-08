@@ -25,5 +25,6 @@ import Selenium from "./Selenium.astro";
 import SQLite from "./SQLite.astro";
 import Tailwind from "./Tailwind.astro";
 import Typescript from "./Typescript.astro";
+import Youtube from "./Youtube.astro";
 
-export {Angular, AstroIcon, Aws, Bootstrap, Django, Docker, ExpressIcon, FastApi, Figma, Flask, Flutter, Git, IconSkill, Java, Javascript, Mongo, MySql, NodeJs, PostgreSQL, Postman, Python, React, Rive, Selenium, SQLite, Tailwind, Typescript}
+export {Angular, AstroIcon, Aws, Bootstrap, Django, Docker, ExpressIcon, FastApi, Figma, Flask, Flutter, Git, IconSkill, Java, Javascript, Mongo, MySql, NodeJs, PostgreSQL, Postman, Python, React, Rive, Selenium, SQLite, Tailwind, Typescript, Youtube}
