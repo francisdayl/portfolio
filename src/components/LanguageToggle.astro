@@ -1,38 +1,38 @@
 ---
-import EnIcon from "./icons/En.astro"
-import EsIcon from "./icons/Es.astro"
+import EnIcon from './icons/En.astro';
+import EsIcon from './icons/Es.astro';
 
 import { languages } from '../i18n/ui';
 
-const isEnglish =  Astro.url.toString().includes("/en");
-const baseClass= "size-6 rounded-full";
+const isEnglish = Astro.url.toString().includes('/en');
+const baseClass = 'size-6 rounded-full';
 const disabledClass = ' cursor-default';
 const enabledClass = ' hover:scale-125 transition';
-const engExtraClass = isEnglish?disabledClass:enabledClass;
-const esExtraClass = !isEnglish?disabledClass:enabledClass;
-
+const engExtraClass = isEnglish ? disabledClass : enabledClass;
+const esExtraClass = !isEnglish ? disabledClass : enabledClass;
 ---
-<div id="LanguageToggle" 
-    class="relative flex flex-row border-black hover:border-[1px] rounded-full gap-1 dark:hover:bg-gray-100/10 ">
-    {
 
-    }
-    <a id="EnglishRef" href="/en/" class={isEnglish? 'order-1':'order-2 hidden'}>
-        <EnIcon class={baseClass+engExtraClass}/></a>
-    <a id="SpanishRef" href="/es/" class={!isEnglish? 'order-1':'order-2 hidden'}>
-        <EsIcon class={baseClass+esExtraClass}/>
-    </a>
+<div
+  id="LanguageToggle"
+  class="relative flex flex-row gap-1 rounded-full border-black hover:border-[1px] dark:hover:bg-gray-100/10"
+>
+  {}
+  <a id="EnglishRef" href="/en/" class={isEnglish ? 'order-1' : 'order-2 hidden'}>
+    <EnIcon class={baseClass + engExtraClass} /></a
+  >
+  <a id="SpanishRef" href="/es/" class={!isEnglish ? 'order-1' : 'order-2 hidden'}>
+    <EsIcon class={baseClass + esExtraClass} />
+  </a>
 </div>
 <style is:inline>
-#LanguageToggle{
-    &:hover{
-        & #EnglishRef{
-            display: inline;
-        }
-        & #SpanishRef{
-            display: inline;
-        }
+  #LanguageToggle {
+    &:hover {
+      & #EnglishRef {
+        display: inline;
+      }
+      & #SpanishRef {
+        display: inline;
+      }
     }
-}
-
+  }
 </style>

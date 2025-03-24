@@ -1,52 +1,64 @@
 ---
-import Coding from "../icons/Coding.astro"
-import Exercise from "../icons/Exercise.astro"
-import Language from "../icons/Language.astro"
-import Music from "../icons/Music.astro"
-import Puzzle from "../icons/Puzzle.astro"
-import SocialIcon from "../SocialIcon.astro"
-import Me from '@public/assets/images/yo.webp'
-import LinkedInIcon from '@public/assets/icons/linkedin.svg'
-import GithubIcon from '@public/assets/icons/github.svg'
-import MailMeIcon from '@public/assets/icons/gmail.svg'
+import Coding from '../icons/Coding.astro';
+import Exercise from '../icons/Exercise.astro';
+import Language from '../icons/Language.astro';
+import Music from '../icons/Music.astro';
+import Puzzle from '../icons/Puzzle.astro';
+import SocialIcon from '../SocialIcon.astro';
+import Me from '@public/assets/images/yo.webp';
+import LinkedInIcon from '@public/assets/icons/linkedin.svg';
+import GithubIcon from '@public/assets/icons/github.svg';
+import MailMeIcon from '@public/assets/icons/gmail.svg';
 
 const textContext = Astro.props.textContext;
-
 ---
-<div class="flex flex-col md:flex-row justify-between" >
-  <div class="order-0 self-center w-100 md:w-1/2">
+
+<div class="flex flex-col justify-between md:flex-row">
+  <div class="order-0 w-100 self-center md:w-1/2">
     <h2 id="typewriter" class="text-bold text-4xl">{textContext.Greeting}</h2>
     <p class="text-pretty">
       {textContext.Description}
     </p>
-    <div
-      class="relative flex flex-col gap-5 overflow-hidden w-full mt-6 md:mt-14 mb-5 md:mb-0">
-      <h2 class="text-xl md:text-2xl font-semibold">{textContext.Hobbies}</h2>
-      <ul class="relative flex flex-row w-50 justify-between ">
-        <li class="size-10"><Music/></li>
-        <li class="size-10"><Exercise/></li>
-        <li class="size-10"><Puzzle/></li>
-        <li class="size-10"><Language/></li>
-        <li class="size-10"><Coding/></li>
+    <div class="relative mb-5 mt-6 flex w-full flex-col gap-5 overflow-hidden md:mb-0 md:mt-14">
+      <h2 class="text-xl font-semibold md:text-2xl">{textContext.Hobbies}</h2>
+      <ul class="w-50 relative flex flex-row justify-between">
+        <li class="size-10"><Music /></li>
+        <li class="size-10"><Exercise /></li>
+        <li class="size-10"><Puzzle /></li>
+        <li class="size-10"><Language /></li>
+        <li class="size-10"><Coding /></li>
       </ul>
     </div>
   </div>
-  <div class="order-1 w-25 flex flex-col justify-center overflow-hidden px-4" >
-    <div
-      class="relative flex flex-col gap-2 md:gap-0 md:flex-row "
-    >
+  <div class="w-25 order-1 flex flex-col justify-center overflow-hidden px-4">
+    <div class="relative flex flex-col gap-2 md:flex-row md:gap-0">
       <img
         src={Me.src}
         alt="David Yanez"
         width="300px"
         height="300px"
-        class="rounded-full self-center size-80"
-      
+        class="size-80 self-center rounded-full"
       />
-      <div class="flex flew-row md:flex-col justify-center gap-5">
-        <SocialIcon class="size-5" src={LinkedInIcon.src} location="top-[-14px] md:left-[-6px] md:top-0" href="https://www.linkedin.com/in/david-yanez-lop/"/>
-        <SocialIcon class="size-5" src={MailMeIcon.src} location="top-[-8px] md:top-0" href="mailto:francisdaylol@gmail.com"/>
-        <SocialIcon class="size-5" src={GithubIcon.src} location="top-[-14px] md:left-[-6px] md:top-0" href="https://github.com/francisdayl" requiresFill=true/>
+      <div class="flew-row flex justify-center gap-5 md:flex-col">
+        <SocialIcon
+          class="size-5"
+          src={LinkedInIcon.src}
+          location="top-[-14px] md:left-[-6px] md:top-0"
+          href="https://www.linkedin.com/in/david-yanez-lop/"
+        />
+        <SocialIcon
+          class="size-5"
+          src={MailMeIcon.src}
+          location="top-[-8px] md:top-0"
+          href="mailto:francisdaylol@gmail.com"
+        />
+        <SocialIcon
+          class="size-5"
+          src={GithubIcon.src}
+          location="top-[-14px] md:left-[-6px] md:top-0"
+          href="https://github.com/francisdayl"
+          requiresFill="true/"
+        />
       </div>
     </div>
   </div>
@@ -59,9 +71,15 @@ const textContext = Astro.props.textContext;
   }
 
   @keyframes blink {
-    0% { opacity: 1; }
-    50% { opacity: 0; }
-    100% { opacity: 1; }
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 </style>
 
@@ -69,7 +87,7 @@ const textContext = Astro.props.textContext;
   document.addEventListener('DOMContentLoaded', () => {
     const typewriterElement = document.getElementById('typewriter');
     const text = typewriterElement.innerText;
-    typewriterElement.innerText = "";
+    typewriterElement.innerText = '';
     let index = 0;
 
     function typeWriter() {

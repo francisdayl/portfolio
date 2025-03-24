@@ -1,34 +1,34 @@
 ---
-import ExperienceItem from "../ExperienceItem.astro";
+import ExperienceItem from '../ExperienceItem.astro';
 
-interface ExperienceActivity{
-    description: string;
-    technologies?: string[];
+interface ExperienceActivity {
+  description: string;
+  technologies?: string[];
 }
 
 interface ExperienceDetail {
-    company: string;
-    role: string;
-    date: string;
-    isCurrent: boolean;
-    activities: ExperienceActivity[];
-
+  company: string;
+  role: string;
+  date: string;
+  isCurrent: boolean;
+  activities: ExperienceActivity[];
 }
 const textContext = Astro.props.textContext;
 const experiences: ExperienceDetail[] = Astro.props.workExperience;
 ---
 
-
 <h2 class="text-3xl font-semibold">{textContext.Title}</h2>
-<ol class="relative border-s border-gray-200 dark:border-gray-700 my-10 ml-2">
-    {
-        experiences.map((experience)=> 
-            <ExperienceItem date={experience.date} role={experience.role} 
-            company={experience.company} isCurrent={experience.isCurrent}
-            textContext={textContext}
-            activities={experience.activities}
-            />
-        )
-    }
+<ol class="relative my-10 ml-2 border-s border-gray-200 dark:border-gray-700">
+  {
+    experiences.map((experience) => (
+      <ExperienceItem
+        date={experience.date}
+        role={experience.role}
+        company={experience.company}
+        isCurrent={experience.isCurrent}
+        textContext={textContext}
+        activities={experience.activities}
+      />
+    ))
+  }
 </ol>
-

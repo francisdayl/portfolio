@@ -1,16 +1,15 @@
 ---
-import { IconSkill } 
-    from "../icons/index"
+import { IconSkill } from '../icons/index';
 
-interface Skill{
-    title: string;
-    description: string;
-    component: any;
+interface Skill {
+  title: string;
+  description: string;
+  component: any;
 }
 
-interface SkillSet{
-    name: string;
-    skill: Skill[]
+interface SkillSet {
+  name: string;
+  skill: Skill[];
 }
 
 const textContext = Astro.props.textContext;
@@ -19,37 +18,42 @@ const skillSet: SkillSet[] = Astro.props.skillSet;
 
 <h2 class="text-3xl font-semibold">{textContext.Title}</h2>
 
-<table class="w-full  mx-auto text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 mt-10">
-    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-        <tr>
-            <th scope="col" class="px-6 py-3">
-                {textContext.Category}
-            </th>
-            <th scope="col" class="px-6 py-3 text-center">
-                {textContext.Tools}
-
-            </th>
+<table
+  class="mx-auto mt-10 w-full text-left text-sm text-gray-500 dark:text-gray-400 rtl:text-right"
+>
+  <thead class="bg-gray-50 text-xs uppercase text-gray-700 dark:bg-gray-700 dark:text-gray-400">
+    <tr>
+      <th scope="col" class="px-6 py-3">
+        {textContext.Category}
+      </th>
+      <th scope="col" class="px-6 py-3 text-center">
+        {textContext.Tools}
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    {
+      skillSet.map((setSkill) => (
+        <tr class="border-b bg-white dark:border-gray-700 dark:bg-gray-800">
+          <th
+            scope="row"
+            class="w-1/4 whitespace-nowrap px-6 py-4 font-medium text-gray-900 dark:text-white"
+          >
+            {setSkill.name}
+          </th>
+          <td class="flex justify-start gap-10 px-6 py-4">
+            {setSkill.skill.map((skill) => (
+              <IconSkill title={skill.title} description={skill.description}>
+                <skill.component
+                  class="size-10"
+                  data-tooltip-target={'tooltip-light-' + skill.title}
+                  data-tooltip-style="light"
+                />
+              </IconSkill>
+            ))}
+          </td>
         </tr>
-    </thead>
-    <tbody>
-        {
-            skillSet.map(setSkill => (
-            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white w-1/4">
-                    {setSkill.name}
-                </th>
-                <td class="px-6 py-4 flex justify-start gap-10">
-                    {
-                        setSkill.skill.map((skill)=>(
-                        <IconSkill  title={skill.title} description={skill.description}>
-                            <skill.component class='size-10' data-tooltip-target={"tooltip-light-"+skill.title} data-tooltip-style="light"/>
-                        </IconSkill>
-                        ))
-                    }
-                </td>
-            </tr>
-            ))
-        }
-        
-    </tbody>
+      ))
+    }
+  </tbody>
 </table>
