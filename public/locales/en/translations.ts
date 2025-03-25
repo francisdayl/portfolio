@@ -13,7 +13,7 @@ export const translatedEnglishContent = {
   AboutMe: {
     Greeting: "Hi, I'm David",
     Description:
-      'Computer science engineer with over 3 years of experience, specialized in Python and Django. I have collaborated and led projects in web, mobile, databases, artificial intelligence, and automation, applying different technologies based on each need.',
+      'Computer Science Engineer with over 4 years of full-stack development experience, with proficiency in backend using Python and NodeJS. I have contributed and led various projects, including web development, mobile development, databases, artificial intelligence, and automation, utilizing different technologies based on the specific needs of each case.',
     Hobbies: 'My Hobbies',
   },
   Experience: {

@@ -1,16 +1,16 @@
 export const experience = [
   {
-    date: 'November 2024',
+    date: 'November 2024 - February 2025',
     role: 'Software Enginer',
     company: 'TIA S.A',
-    isCurrent: true,
+    isCurrent: false,
     activities: [
       {
-        description: 'Conducted stress testing on microservices and optimized of database queries',
+        description: 'Conducted stress testing, profiling and optimization on microservices.',
         technologies: ['Locust', 'Python', 'NodeJS', 'Express', 'OracleDB'],
       },
       {
-        description: 'Migrated a server-dedicated API to a serverless architecture.',
+        description: 'Migrated a server-dedicated API to a serverless architecture with CI/CD.',
         technologies: [
           'NodeJS',
           'AWS Lambda',
@@ -30,7 +30,7 @@ export const experience = [
       },
       {
         description:
-          'Developed a private logging middleware package to standardize logs across the company microservices.',
+          'Developed a private middleware packages to standardize logs and authentication across the company microservices.',
         technologies: ['Gitlab CI', 'Gitlab Registries', 'Gitlab Runners', 'NodeJS', 'Winston'],
       },
       {
@@ -74,13 +74,34 @@ export const experience = [
     activities: [
       {
         description:
-          'Update and creation of functionalities in views, tests, templates, models, and the admin panel in an intellectual property registration platform.',
+          'Developed, optimized, and maintained views, templates, migrations and models of an intellectual property registration platform for an american start-up.',
         technologies: ['Django', 'PostgreSQL', 'JavaScript', 'Docker', 'JQuery'],
       },
       {
+        description: 'Implemented unit and end-to-end tests following TDD principles',
+        technologies: [
+          'Django',
+          'PostgreSQL',
+          'JavaScript',
+          'Docker',
+          'Selenium',
+          'Pytest',
+          'Semaphore CI',
+        ],
+      },
+      {
+        description: 'Customized the Django admin panel for improving models’ management.',
+        technologies: ['Django', 'Python', 'JQuery', 'Javascript'],
+      },
+      {
         description:
-          'Maintenance and creation of new functionalities for a warehouse management platform.',
-        technologies: ['React', 'FastAPI', 'PostgreSQL', 'AzureDevOps'],
+          'Monitored and troubleshooted critical errors using an observability platform.',
+        technologies: ['Sentry', 'Python', 'Javascript'],
+      },
+      {
+        description:
+          'Designed, developed and maintained functionalities of a warehouse management platform for an american start-up.',
+        technologies: ['React', 'FastAPI', 'PostgreSQL', 'Azure DevOps'],
       },
       { description: 'Mentoring new developers.' },
     ],
@@ -92,9 +113,8 @@ export const experience = [
     isCurrent: false,
     activities: [
       {
-        description:
-          'Development of the UI and implementation of functional requirements for the billing module of a courier platform.',
-        technologies: ['Angular', 'Express', 'NodeJS', 'Typescript'],
+        description: 'Developed the UI and frontend of the billing module of a courier platform. ',
+        technologies: ['Angular', 'Express', 'NodeJS', 'Typescript', 'Figma'],
       },
       { description: 'Production deployment', technologies: ['Jenkins', 'AWS'] },
     ],
@@ -106,7 +126,8 @@ export const experience = [
     isCurrent: false,
     activities: [
       {
-        description: 'Maintenance for container shift management platform.',
+        description:
+          'Maintained a container shift management platform in the frontend and backend.',
         technologies: ['Angular', 'Typescript', 'Java', 'PostgreSQL'],
       },
       {
@@ -114,7 +135,8 @@ export const experience = [
         technologies: ['Python', 'Selenium', 'PostgreSQL'],
       },
       {
-        description: 'Creation of Whatsapp chatbot with report generation.',
+        description:
+          'Created a WhatsApp chatbot to measure the employees work satisfaction and generated excel reports.',
         technologies: ['NodeJS', 'Excel'],
       },
     ],

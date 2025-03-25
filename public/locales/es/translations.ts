@@ -18,7 +18,7 @@ export const translatedSpanishContent = {
   AboutMe: {
     Greeting: 'Hola, Soy David',
     Description:
-      'Ingeniero en computación con más de 3 años de experiencia, especializado en Python y Django. He colaborado y liderado proyectos web, móviles, bases de datos, inteligencia artificial y automatización, aplicando diferentes tecnologías según cada necesidad.',
+      'Ingeniero en Computación con más de 4 años de experiencia realizando desarrollo fullstack, con proficiencia en backend con Python y NodeJS. He contribuido y liderado diversos proyectos, incluyendo desarrollo web, desarrollo móvil, bases de datos, inteligencia artificial y automatización, utilizando distintas tecnologías según las necesidades de cada caso.',
     Hobbies: 'Mis Pasatiempos',
   },
   Experience: {

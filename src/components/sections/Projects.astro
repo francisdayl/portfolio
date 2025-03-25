@@ -23,11 +23,11 @@ interface Project {
   repository: string;
   technologies: any[];
 }
-
+const textContext = Astro.props.textContext;
 const projects: Project[] = Astro.props.projects;
 ---
 
-<h2 class="mt-10 text-3xl font-semibold">Proyectos</h2>
+<h2 class="mt-10 text-3xl font-semibold">{textContext.Title}</h2>
 
 <ul
   class="relative mx-auto my-10 grid w-full grid-cols-1 justify-center gap-14 px-10 sm:px-0 md:grid-cols-2"

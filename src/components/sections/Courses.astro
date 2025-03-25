@@ -2,6 +2,7 @@
 import Certification from '../Certification.astro';
 import CloudPractitionerCertification from '@public/assets/icons/cloud_practitioner_badge.webp';
 import DeveloperAssociateCertification from '@public/assets/icons/developer_badge.webp';
+import SolutionsArchitectAssociateCertification from '@public/assets/icons/solutions_architect_badge.webp';
 
 interface CertificationProps {
   href: string;
@@ -20,11 +21,18 @@ const certifications: CertificationProps[] = [
     classnames: 'size-44',
   },
   {
-    href: '#courses',
+    href: 'https://www.credly.com/badges/09efb229-c626-47d2-8e41-69af911585b5/',
     image: DeveloperAssociateCertification.src,
     name: 'AWS Developer Associate',
+    completed: true,
+    classnames: 'size-44',
+  },
+  {
+    href: '#courses',
+    image: SolutionsArchitectAssociateCertification.src,
+    name: 'AWS Developer Associate',
     completed: false,
-    classnames: 'grayscale brightness-150 size-44',
+    classnames: 'grayscale brightness-150 grayscale brightness-150 size-44',
   },
 ];
 
