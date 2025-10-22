@@ -50,10 +50,10 @@ export const spanishProjects = [
     title: 'GenHora',
     description:
       'Programa que permite generar todos los horarios posibles basados en las preferencias del estudiante/usuario. Los horarios son guardados en archivos excel.',
-    website: '',
+    website: 'https://genhora-front.vercel.app/',
     video: '',
     repository: 'https://github.com/francisdayl/GenHora',
-    technologies: [Python, Selenium, Git],
+    technologies: [Python, React, Aws, Tailwind, Selenium, Git],
   },
   {
     image: TechstoreCapture.src,

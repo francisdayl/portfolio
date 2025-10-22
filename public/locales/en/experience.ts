@@ -1,6 +1,55 @@
 export const experience = [
   {
-    date: 'November 2024 - February 2025',
+    date: 'July 2025',
+    role: 'Software Engineer',
+    company: 'Freelance',
+    isCurrent: true,
+    activities: [
+      {
+        description: 'Developed a RAG Agent to manage restaurant chain orders through natural language interaction.',
+        technologies: ['AWS Bedrock Agent', 'AWS Lambda', 'Serverless', 'AWS IAM', 'AWS DynamoDB', 'AWS Cloudwatch', 'AWS SSM Parameter Store', 'AWS Secrets Manager', 'Python', 'GitHub Actions', 'OpenAPI'],
+      },
+      {
+        description:
+          'Created documentation and entity-relationship, activity, and architecture diagrams.',
+        technologies: [
+          'Lucidchart', 'Miro', 'Markdown'
+        ],
+      },
+    ],
+  },
+    {
+    date: 'May 2025 - July 2025',
+    role: 'DevOps Engineer',
+    company: 'Chiang S.A',
+    isCurrent: false,
+    activities: [
+      {
+        description: 'Design and optimization of CI/CD pipelines, including the creation of custom pipes to modularize and standardize deployment processes.',
+        technologies: ['Bitbucket', 'Bitbucket pipelines', 'Docker', 'DockerHub', 'Python', 'Ansible', 'Shell'],
+      },
+      {
+        description:
+          'Migration of proxy servers from VMware environments to Virtuozzo, ensuring operational continuity and automated maintenance.',
+        technologies: [
+          'Bitbucket pipelines', 'Ansible', 'Squid', 'Python', 'Docker', 'Linux', 'Shell', 'Cron Jobs', 'Netplan', 'Networking'
+        ],
+      },
+      {
+        description: 'Automation of configuration, provisioning, and hardening of virtual machines to comply with internal security policies, as well as managing credentials through Google Cloud Secrets.',
+        technologies: ['Ansible', 'Bitbucket pipelines', 'Docker', 'GC Secrets', 'GC Storage', 'GC Secrets', 'GC Service Accounts', 'Linux', 'Python'],
+      },
+      {
+        description:
+          'Project and infrastructure documentation.',
+        technologies: [
+          'Lucidchart', 'Markdown', 'Draw.io'
+        ],
+      },
+    ],
+  },
+  {
+    date: 'October 2024 - March 2025',
     role: 'Software Enginer',
     company: 'TIA S.A',
     isCurrent: false,
@@ -107,7 +156,7 @@ export const experience = [
     ],
   },
   {
-    date: 'July 2022 - January 2023',
+    date: 'January 2022 - January 2023',
     role: 'Full Stack Developer',
     company: 'BlackBox',
     isCurrent: false,
@@ -117,14 +166,6 @@ export const experience = [
         technologies: ['Angular', 'Express', 'NodeJS', 'Typescript', 'Figma'],
       },
       { description: 'Production deployment', technologies: ['Jenkins', 'AWS'] },
-    ],
-  },
-  {
-    date: 'January 2022 - June 2022',
-    role: 'Full Stack Developer (Internship)',
-    company: 'BlackBox',
-    isCurrent: false,
-    activities: [
       {
         description:
           'Maintained a container shift management platform in the frontend and backend.',

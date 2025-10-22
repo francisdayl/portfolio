@@ -1,6 +1,7 @@
 ---
 import Certification from '../Certification.astro';
 import CloudPractitionerCertification from '@public/assets/icons/cloud_practitioner_badge.webp';
+import AIPractitionerCertification from '@public/assets/icons/ai_practitioner_badge.webp';
 import DeveloperAssociateCertification from '@public/assets/icons/developer_badge.webp';
 import SolutionsArchitectAssociateCertification from '@public/assets/icons/solutions_architect_badge.webp';
 
@@ -17,6 +18,13 @@ const certifications: CertificationProps[] = [
     href: 'https://www.credly.com/badges/222987f0-e207-4534-a021-c4370165bac9',
     image: CloudPractitionerCertification.src,
     name: 'AWS Cloud Practitioner',
+    completed: true,
+    classnames: 'size-44',
+  },
+  {
+    href: 'https://www.credly.com/badges/a85234fb-e9a9-4f6f-bf9b-31bb8cdde36f/',
+    image: AIPractitionerCertification.src,
+    name: 'AWS AI Practitioner',
     completed: true,
     classnames: 'size-44',
   },

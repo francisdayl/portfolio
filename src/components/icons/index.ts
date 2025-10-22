@@ -1,4 +1,5 @@
 import Angular from './Angular.astro';
+import Ansible from './Ansible.astro';
 import AstroIcon from './AstroIcon.astro';
 import Aws from './Aws.astro';
 import Bootstrap from './Bootstrap.astro';
@@ -9,6 +10,7 @@ import FastApi from './FastApi.astro';
 import Figma from './Figma.astro';
 import Flask from './Flask.astro';
 import Flutter from './Flutter.astro';
+import GCP from './GCP.astro';
 import Git from './Git.astro';
 import IconSkill from '../IconSkill.astro';
 import Java from './Java.astro';
@@ -29,6 +31,7 @@ import Youtube from './Youtube.astro';
 
 export {
   Angular,
+  Ansible,
   AstroIcon,
   Aws,
   Bootstrap,
@@ -39,6 +42,7 @@ export {
   Figma,
   Flask,
   Flutter,
+  GCP,
   Git,
   IconSkill,
   Java,

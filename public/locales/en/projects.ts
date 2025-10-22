@@ -48,9 +48,9 @@ export const englishProjects = [
     title: 'GenHora',
     description:
       'Program that allows to generate all possible schedules based on student/user preferences. The schedules are saved on excel files',
-    website: '',
+    website: 'https://genhora-front.vercel.app/',
     repository: 'https://github.com/francisdayl/GenHora',
-    technologies: [Python, Selenium, Git],
+    technologies: [Python, React, Aws, Tailwind, Selenium, Git],
   },
   {
     image: TechstoreCapture.src,

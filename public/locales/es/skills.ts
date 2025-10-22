@@ -1,5 +1,6 @@
 import {
   Angular,
+  Ansible,
   AstroIcon,
   Aws,
   Bootstrap,
@@ -10,6 +11,7 @@ import {
   Figma,
   Flask,
   Flutter,
+  GCP,
   Git,
   IconSkill,
   Java,
@@ -71,7 +73,9 @@ export const spanishSkills = [
     name: 'DevOps',
     skill: [
       { title: 'AWS', description: '+1 año', component: Aws },
+      { title: 'GCP', description: '+1 año', component: GCP },
       { title: 'Docker', description: '+2 años', component: Docker },
+      { title: 'Ansible', description: '+1 año', component: Ansible },
       { title: 'Git', description: '+4 años', component: Git },
     ],
   },
